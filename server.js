@@ -1,6 +1,5 @@
 const express = require('express');
-const ejs = require('ejs');
-const bodyParser = require('body-parser')
+
 
 const server = express();
 
@@ -9,11 +8,15 @@ const url = 'https://api.nasa.gov/planetary/apod?api_key=VLXRS1OhKA4gEpO1t9tPPU5
 server.set('views', './src/views');
 server.set('view engine', 'ejs')
 
+server.get('/nasa', (req, res) => {
+    fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data)
+        res.render("nasa", {nasaData: data})
+    })
+})
 
-app.use(bodyParser.urlencoded({ extended: false }))
-
-
-app.use(bodyParser.json())
 
 const PORT = 3000;
 

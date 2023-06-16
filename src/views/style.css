@@ -1,0 +1,30 @@
+
+/* * {
+    padding: 0;
+    margin: 0;
+}  */
+
+#pic-of-day {
+    display: flex;
+    justify-content: center;
+    color:brown;
+    
+} 
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#daily-img {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+}

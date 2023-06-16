@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link href="./src/views/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div>
+        <h1 id="pic-of-day"> Astronomy Picture of the Day</h1>
+
+        
+            <h2 id="title"><%= nasaData.title %></h2>
+            <h3 id="date"><%= nasaData.date %></h3>
+        </div>
+        <div>
+            <img class-name="daily-img" src="<%=nasaData.url%>"/>
+
+            <p><%= nasaData.explanation %></p>
+        </div>
+    </body>
+</html>
