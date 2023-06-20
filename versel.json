@@ -4,14 +4,14 @@
     {
       "src": "server.js",
 
-      "use": "@dev/node"
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/home/prev-pic",
+      "src": "/(.*)",
 
-      "dest": "server.js"
+      "dest": "/"
     }
   ]
 }
