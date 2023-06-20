@@ -6,7 +6,7 @@
 
 <body>
   <h1 id="top-title">Previous Pictures of the day</h1>
-  <% nasaData.map(el => { %>
+  <% nasaData[2].map(el => { %>
   <h2 id="title"><%= el.title %></h2>
   <h3 id="date"><%= el.date %></h3>
 
@@ -22,6 +22,7 @@
   <p><%= el.explanation %></p>
 
   <% }) %>
+
   <nav>
     <a href="/home">home</a>
   </nav>
