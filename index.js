@@ -2,7 +2,7 @@ const express = require("express");
 
 const server = express();
 
-server.use("/public", express.static("public"));
+server.use(express.static("public"));
 
 const url =
   "https://api.nasa.gov/planetary/apod?api_key=VLXRS1OhKA4gEpO1t9tPPU5cWWLU7ps8ousjyZiG";
@@ -12,12 +12,11 @@ const prevPicUrl =
 server.set("views", "./src/views");
 server.set("view engine", "ejs");
 
-server.get("/home", (req, res) => {
+server.get("/", (req, res) => {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      res.send("Express on Vercel")
+      // console.log(data);
       res.render("home", { nasaData: data });
     });
 });
@@ -26,7 +25,7 @@ server.get("/prev-pic", (req, res) => {
   fetch(prevPicUrl)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
 
       //   function for infinite scroll
 
