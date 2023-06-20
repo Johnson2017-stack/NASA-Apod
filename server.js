@@ -51,7 +51,6 @@ server.get("/prev-pic", (req, res) => {
         }
         main();
       });
-      // res.send("Express on Vercel")
       res.render("prev-pic", { nasaData: data });
     });
 });
