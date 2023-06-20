@@ -28,7 +28,7 @@ server.get("/prev-pic", (req, res) => {
       console.log(data);
 
       //   function for infinite scroll
-      
+
       (function (data) {
         "use strict";
         function sleep(ms) {
@@ -60,3 +60,5 @@ const PORT = 3000;
 server.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
+
+module.exports = server;
