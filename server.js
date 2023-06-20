@@ -17,6 +17,7 @@ server.get("/home", (req, res) => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+      res.send("Express on Vercel")
       res.render("home", { nasaData: data });
     });
 });
@@ -50,7 +51,7 @@ server.get("/prev-pic", (req, res) => {
         }
         main();
       });
-
+      res.send("Express on Vercel")
       res.render("prev-pic", { nasaData: data });
     });
 });

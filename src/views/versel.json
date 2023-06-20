@@ -4,12 +4,12 @@
     {
       "src": "server.js",
 
-      "use": "@now/node"
+      "use": "@dev/node"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/home/prev-pic",
 
       "dest": "server.js"
     }
