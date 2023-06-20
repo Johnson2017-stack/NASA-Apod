@@ -1,11 +1,13 @@
 
- * {
+ *, ::before, ::after{
     padding: 0;
     margin: 0;
     color: white;
-    background: #000 url(./images/stars.png) repeat top center;
     } 
 
+body{
+    background: #000 url(./images/stars.png) repeat top center;
+}
 #top-title {
     display: flex;
     justify-content: center;
